@@ -9,7 +9,7 @@
     <b>Random posts</b>: {{ random(posts) }}
 
     {% for post in posts %}
-
+        <br>{{ post.title }}
     {% endfor %}
 
     {{ include ('_footer.html.twig', {'bar':'foo'}) }}
