@@ -3,8 +3,13 @@
 {% block body %}
     <h1>TwigLab</h1>
     <p>This is a project to practice about twig ... and symfony of course ^^.</p>
-
+    <i>{{ 'now'|date('d m Y') }}</i>
     <hr>
 
     <b>Random posts</b>: {{ random(posts) }}
+
+    {% for post in posts %}
+
+    {% endfor %}
+    
 {% endblock %}
