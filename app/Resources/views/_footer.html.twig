@@ -1,1 +1,7 @@
+{% if bar is defined %}
+    {% set bar = bar %}
+{% else %}
+    {% set bar = 'other' %}
+{% endif %}
+
 <h5>Footer <i>{{ bar }}</i></h5>
