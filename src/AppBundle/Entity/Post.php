@@ -93,5 +93,10 @@ class Post
     {
         return $this->content;
     }
+
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
 }
 
