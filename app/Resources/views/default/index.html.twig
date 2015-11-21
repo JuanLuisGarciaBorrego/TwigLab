@@ -11,5 +11,6 @@
     {% for post in posts %}
 
     {% endfor %}
-    
+
+    {{ include ('_footer.html.twig', {'bar' : 'foo'}) }}
 {% endblock %}
