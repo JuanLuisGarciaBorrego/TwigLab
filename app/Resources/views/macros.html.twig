@@ -1,0 +1,9 @@
+{% macro printPosts(posts, emptyMessage ) %}
+
+    {% for post in posts %}
+        <br>{{ post.title }}
+    {% else %}
+        {{ emptyMessage }}
+    {% endfor %}
+
+{% endmacro %}

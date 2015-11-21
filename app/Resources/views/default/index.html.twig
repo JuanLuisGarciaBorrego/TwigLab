@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% import 'macros.html.twig' as MyMacros %}
+
 {% block body %}
     <h1>TwigLab</h1>
     <p>This is a project to practice about twig ... and symfony of course ^^.</p>
@@ -8,9 +10,12 @@
 
     <b>Random posts</b>: {{ random(posts) }}
 
-    {% for post in posts %}
-        <br>{{ post.title }}
-    {% endfor %}
+    {{ MyMacros.printPosts(posts, 'There is not any posts') }}
+
+    <hr>
+    
+    {% set posts = null %}
+    {{ MyMacros.printPosts(posts, 'There is not any posts .... other message') }}
 
     {{ include ('_footer.html.twig', {'bar':'foo'}) }}
     {# include ('_footer.html.twig') #}
