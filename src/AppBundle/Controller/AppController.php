@@ -15,7 +15,8 @@ class AppController extends Controller
         $posts = $this->getDoctrine()->getRepository('AppBundle:Post')->findAll();
 
         return $this->render('default/index.html.twig', array(
-            'posts' => $posts
+            'posts' => $posts,
+            'category' => 'news'
         ));
     }
 }

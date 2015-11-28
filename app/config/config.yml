@@ -35,6 +35,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        global:
+            author: 'Juan Luis García Borrego'
 
 # Assetic Configuration
 assetic:
