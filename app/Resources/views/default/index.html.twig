@@ -2,6 +2,10 @@
 
 {% import 'macros.html.twig' as MyMacros %}
 
+{% macro MymacroInterna(bar) %}
+    <br><b>{{ bar }}</b><br>
+{% endmacro %}
+
 {% block body %}
     <h1>TwigLab</h1>
     <p>This is a project to practice about twig ... and symfony of course ^^.</p>
@@ -17,6 +21,9 @@
     {% set posts = null %}
     {{ MyMacros.printPosts(posts, 'There is not any posts .... other message') }}
 
+    {{ _self.MymacroInterna('foo')  }}
+    
     {{ include ('_footer.html.twig', {'bar':'foo'}) }}
     {# include ('_footer.html.twig') #}
+
 {% endblock %}
